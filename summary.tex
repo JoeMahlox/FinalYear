@@ -1,0 +1,37 @@
+%%
+%%  Department of Electrical, Electronic and Computer Engineering.
+%%  EPR400/2 Final Report - Section 2.
+%%  Copyright (C) 2011-2018 University of Pretoria.
+%%
+
+This report describes the work that was done in developing a home shopping list device. The aim of the device was to recognize shopping list data in the form of handwriting input, convert it to text and save it. The device would then send the converted shopping list data to the user’s phone when they requested it. 
+
+\textbf{What has been done}
+%(Add a figure or figures here – this will probably be a figure that also appears in section 4 of the report).
+
+A literature study was conducted and completed on different handwriting recognition schemes. The literature study also overreached to include designs that are used in modern communication systems. The software for the handwriting recognition system of the device was developed from first principles. The integral component of the system is a Raspberry Pi board. The rest of the hardware, mostly off the shelf was connected to this RPi board. A Python program was used to simulate the recognition process on a Linux OS. The communication process was also simulated using a Python program. A Wi-Fi connection was programmed onto the integral Raspberry Pi board. These programs were then integrated to work concurrently and then implemented onto the Raspberry Pi board.
+
+What has been achieved
+The device developed produced was able to successfully send the shopping list written by the user to their phone on request. The test case distance for the communication was 40 km. The device also converted the handwritten shopping list data to readable text at an acceptable error level. Higher accuracy levels could be implemented by training the recognition algorithm with the already converted shopping list data, but the trade-off was that it would take too long to convert the  
+input thereby inconveniencing customers. 
+
+
+\textbf{Findings}
+
+A discovery that was made during the design and implementation of the device was that the number of hidden layers used in the recognition algorithm’s neural network affected the accuracy of the recognition scheme. More hidden layers generally increased the accuracy of the scheme. The number of hidden layers also impacted the time taken to convert the input to readable text. More hidden layers led to more time taken for full conversion. Therefore, the number of hidden layers had to be designed carefully to consider the trade-off of optimizing accuracy as well as minimizing conversion time.
+
+\textbf{Contribution}
+
+Code was mostly developed by the student, with a strong reliance on existing libraries. As the code was of large scope, some modules were taken directly from existing libraries, while other modules were coded from first principles. Friends in class initially helped with coding in R for statistical analyses, as this was complex and completely new to the student.
+
+Programming of the Graphical User Interface was done by using PyQt. The student had minor familiarity with Qt, a C++ equivalent of PyQt. Therefore, the theory associated with programming in the PyQt development environment was first mastered and the user interface was developed afterwards. The geometry bounds associated with the development environment were important in the design section to be explored later. 
+
+SSL communication was mastered for the device’s communication system to be successfully implemented. The student had no familiarity with the Basic “AT” commands associated with communication, so a thorough understanding was established from Mouly (1996). The student then developed the code for the communication of the home shopping list device and the student’s cell phone. This code was developed in Python. 
+
+The recognition algorithm was implemented using the IDE software called Spyder3. Spyder3 uses the Python programming language. There was some mild familiarity with Python as the language was earlier used for simulating non-complex digital signal processing. Complex Python programming was studied from Rollins (2006). No assistance was required from the study leader when the code was initially implemented. Once the software was integrated onto the hardware, the study leader’s feedback was collected, and the software was tweaked as specified. The study leader was mostly helpful with complications in hardware integration.
+
+
+\newpage
+
+%% End of File.
+

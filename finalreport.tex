@@ -1,0 +1,107 @@
+%%
+%%  Department of Electrical, Electronic and Computer Engineering.
+%%  EPR400/2 Final Report - Main File.
+%%  Copyright (C) 2011-2018 University of Pretoria.
+%%
+
+\documentclass{epr400}
+
+\usepackage{ragged2e}
+
+\usepackage{algorithmic}
+%\usepackage[ruled,linesnumbered]{algorithm2e}
+
+
+
+%\usepackage[font={small}]{caption}
+
+%% EDIT: Replace the following with your information.
+\eprtitle{Design of an electonic home shopping list}
+\eprcode{EPR402}
+\eprcandidatename{J.K. Mahlokozela}
+\eprstudentnumber{15145574}
+\eprdate{November 2018}
+\eprsupervisor{Prof T. Stander}
+
+\hyphenpenalty=10000
+\allowdisplaybreaks
+
+
+\begin{document}
+
+%% Generate the required title page.
+\begin{flushleft}
+\maketitlepage
+\end{flushleft}
+
+
+%% --- PART 1 ------------------------------------------------------------
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+\eprsec{Part 1. Preamble}
+
+\vspace*{0.5cm}
+
+%% Import the required preamble pages.
+\input{preamble}
+\newpage
+
+%% Add the Table of Contents.
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+%% Import the required abbreviation pages.
+\input{abbreviations}
+\newpage
+
+%% --- PART 2 ------------------------------------------------------------
+
+\eprsec{Part 2. Summary}
+
+%% Import the summary section
+\input{summary}
+
+%% --- PART 3 ------------------------------------------------------------
+
+\eprsec{Part 3. Project identification: approved Project Proposal}
+
+%% Import the approved project proposal
+\input{proposal}
+
+%% --- PART 4 ------------------------------------------------------------
+
+\eprsec{Part 4. Main Report}
+\newpage
+
+%% Reset the page number style and count.
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%% Import the main report content
+\input{section1}
+\input{section2}
+\input{section3}
+\input{section4}
+\input{section5}
+\input{section6}
+
+%% Use the IEEE Transactions style for the references.
+\bibliographystyle{IEEEtran}
+\bibliography{finalreport}
+\newpage
+
+\newpage
+
+%% --- PART 5 ------------------------------------------------------------
+
+\eprsec{Part 5. Technical Documentation}
+
+\input{techdoc}
+\newpage
+
+\end{document}
+
+%% End of File.

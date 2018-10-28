@@ -1,0 +1,37 @@
+\babel@toc {british}{}
+\contentsline {part}{Part 1. Preamble}{i}
+\contentsline {part}{Part 2. Summary}{vi}
+\contentsline {part}{Part 3. Project identification: approved Project Proposal}{viii}
+\contentsline {section}{\numberline {1}Problem statement}{ix}
+\contentsline {section}{\numberline {2}Project requirements}{x}
+\contentsline {subsection}{\numberline {2.1}Mission requirements of the product}{x}
+\contentsline {subsection}{\numberline {2.2}Student tasks}{x}
+\contentsline {section}{\numberline {3}Functional analysis}{xi}
+\contentsline {section}{\numberline {4}Target Specifications}{xiii}
+\contentsline {subsection}{\numberline {4.1}Mission-critical system specifications}{xiii}
+\contentsline {subsection}{\numberline {4.2}Field conditions}{xv}
+\contentsline {section}{\numberline {5}Deliverables}{xvi}
+\contentsline {subsection}{\numberline {5.1}Technical deliverables}{xvi}
+\contentsline {subsection}{\numberline {5.2}Demonstration at the examination}{xvii}
+\contentsline {section}{\numberline {6}References}{xviii}
+\contentsline {part}{Part 4. Main Report}{xix}
+\contentsline {section}{\numberline {1}Literature Study}{1}
+\contentsline {section}{\numberline {2}Approach}{10}
+\contentsline {subsection}{\numberline {2.1}Design alternatives}{10}
+\contentsline {subsection}{\numberline {2.2}Preferred solution}{12}
+\contentsline {section}{\numberline {3}Design and implementation}{14}
+\contentsline {subsection}{\numberline {3.1}Theoretical analysis}{14}
+\contentsline {subsection}{\numberline {3.2}Modelling}{37}
+\contentsline {subsection}{\numberline {3.3}Optimization}{41}
+\contentsline {subsection}{\numberline {3.4}Data Design}{41}
+\contentsline {subsubsection}{\numberline {3.4.1}Internal Software Data Structure}{42}
+\contentsline {subsection}{\numberline {3.5}Design summary}{42}
+\contentsline {section}{\numberline {4}Results}{43}
+\contentsline {subsection}{\numberline {4.1}Summary of results achieved}{43}
+\contentsline {subsection}{\numberline {4.2}Qualification tests}{43}
+\contentsline {section}{\numberline {5}Discussion}{44}
+\contentsline {section}{\numberline {6}Conclusion}{45}
+\contentsline {subsection}{\numberline {6.1}Summary of the work}{45}
+\contentsline {section}{\numberline {7}References}{46}
+\contentsline {part}{Part 5. Technical Documentation}{47}
+\contentsfinish 
