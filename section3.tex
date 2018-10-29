@@ -534,7 +534,7 @@ The home shopping device will be designed from different components with a devel
 
 The handwriting writing and conversion process can be summarized by the flow chart below. The flow chart only documents the process from where the user writes onto the touchscreen until the user finishes writing onto the touchscreen.
 \clearpage
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{34}
 	\caption{Flowchart of the handwriting recognition process}
@@ -547,7 +547,7 @@ The output array after full conversion was then pushed to a text file and a new 
 
 Next, the shopping list from the conversion process had to be sent to the user's phone. The file had to be sent only when the user requested for it via e-mail. The flow chart on the next page details the steps that were taken for the file to be sent to the user's e-mail address. First, the Wi-Fi connection had to be established for the shopping list device to have an Internet connection. When an Internet connection had been established, the shopping list device would access the e-mail address assigned to it by default during the implementation process. The shopping list device would listen for a connection from the user's email address which was programmed within the communication algorithm. This process was generally known as the shopping device acting as the communicating server between the two devices, waiting for the client connection from the user's e-mail. When the user sent the e-mail, the sending process would be activated. The server was programmed to listen to any command from the user's email and this would trigger the process of sending the shopping list in the text file. The text file contents were read and stored  in an array of strings. The array of strings was then concatenated into a single string with elements separated by the newline character. The concatenated string was then sent to the user's email that had sent the command for the shopping list. The user then received the shopping list on their phone and did their shopping.
 \clearpage
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{36.jpg}
 	\caption{Flowchart of sending the shopping list to the user's e-mail}
@@ -564,7 +564,7 @@ For the GSM network option, the transfer speeds of GSM are $\approx$ 10 kbps. Th
 This is way very slow and does not meet the time specifications of the product.
 
 A trade-off is analyzed for the frequency band for the Wi-Fi communication. The frequency band in important in determining the Wi-Fi module to use for the shopping list device. Infrared waves cannot penetrate walls therefore are extremely range limited but offer very fast transmission speeds. On the other hand, radio waves can travel long distances but their data transmission rates are significantly lower. The two properties can be quantitatively compared by taking an example of 20 km between the source and destination. This models a situation where the customer shops 20 km from their home and requests the shopping the list in a wireless manner. The calculations associated with this transmission are shown below.\\
-
+\newpage
 \subsection{Data Design}
 The software process of the project was modulated into different components. The components were listed as follows:
 \begin{itemize}
@@ -586,7 +586,156 @@ The e-mail communication software component facilitated the shopping list device
 The characteristic of the recognition algorithm to learn and update weight components required the use of  dynamic arrays. This is due to the fact that memory could be deallocated easily when dynamic arrays were used. Additionally, a 2-dimensional array will be associated with the PyQt GUI widget.
 
 \subsubsection{Global Software Data Structure}
-The output from the handwriting recognition process was saved gloablly so that it could be used by the e-mail server to send the shopping oist to the client's phone therefore the string data structure, which was used to save the handwriting converted output was a global variable. Alternatively the data structure could have been a character array.
+The output from the handwriting recognition process was saved globally so that it could be used by the e-mail server to send the shopping list to the client's phone therefore the string data structure, which was used to save the handwriting converted output was a global variable. Alternatively the data structure could have been a character array. Additionally, the shopping list could be requested any time, even during data input therefore the boolean data structure for listening to an incoming email request was global. 
+\subsubsection{Temporary Data Structure}
+The data structures which were temporary were mainly found in the recognition process. The errors were calculated for each output neuron and summed up before calculating the derivative. The error array then needed to be deallocated from memory. Another temporary variable was the count which was used for counting the number of words in the input sentence. As soon as the whole input was fully converted, this variable had to be reset and cleared until the next handwriting input. This variable was an integer.
+
+\subsubsection{Database Description}
+\textbf{2D Array Name}: widget$\_$Display\\
+\textbf{Attributes}: save$\_$input, clear$\_$screen, capturedImage\\
+\textbf{Description}: The array saved the resolution coordinates of the touchscreen and their colours. Initially, these were all zero values which represented the blank white screen. This database was important for the saving of user input by entering the non-white components of the touchscreen to their corresponding coordinates in the 2 dimensional array. The array contained integer values of  and 0, with 0 representing white and 1 representing non-white points from the screen-shot stored in capturedImage. \\\\
+\textbf{2D Character Array Name}: shoppingList\\
+\textbf{Attributes}: neural$\_$out, widget$\_$Display\\
+\textbf{Description}: This array stored the outputs from the neural network. The neural network outputs were first concatenated after learning and error correction and they were then passed through a Viterbi algorithm to determine the closest word in the user's custom dictionary. The words were then combined to get the full initially input sentence. This word was then passed to the next free row of this array $shoppingList$ so that each row contained a sentence that was converted from the written sentence on the touchscreen, which was provided form widget$\_$Display.  \\\\
+\textbf{Stack Name}: email$\_$Inbox\\
+\textbf{Attributes}: email$\_$address, new$\_$mail\\
+\textbf{Description}: The device had to access its email inbox database, first checking if new mail was received since the last access by using  the variable new$\_$mail which was a boolean. New mail was saved onto the argument stack and read. If the mail was not relevant, then the new$\_$mail variable would just be cleared but if the mail was from the desired client, the communication algorithm would send the shopping list to the email address of the stack element. 
+
+\subsection{Architectural and Component Level Design}
+\subsubsection{Program Description}
+The structure chart method was used to represent the architectural diagram for the shopping list device. The dotted connections showed the partial dependencies of the architectural blocks connected. The classes that were designed to include the component block used the hierarchal class structure to show the most important classes for the device to be operational.
+\subsubsection{Architecture Diagram}
+The architectural block diagram of the home shopping list device software was shown below.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{38}
+	\caption{Architectural diagram for the shopping list device}
+\end{figure}
+
+\subsubsection{Architectural Component Description}
+The software component of the device was divided into 3 classes which were designed as shown in the figure that follows.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{42}
+	\caption{Architectural diagram for the shopping list device}
+\end{figure}
+
+\subsubsection{Description of Components}
+\textbf{Component NeuralNetwork}
+\begin{itemize}
+	\item \textbf{Processing Narrative of NeuralNetwork}: The attributes of the component include the weight matrix which was randomly generated, the input values from the touchscreen screen-shot, the character output after a neural network conversion and the full converted word. This was the most important component of the  home shopping list device's software because without it, no conversion would to take place thus the device would only contain handwritten screen-shots.
+	\item \textbf{Interface Description of component NeuralNetwork}: The component interfaced with the GUI$\_$Display to get the vector representation of the 2D $x-$input array. It also saved the full word output to the full shopping list array which it passed to the communication component on request.
+	\item \textbf{Algorithmic Description of the NeuralNetwork component}: The component links all three components of the software system as follows:\\
+	\begin{itemize}
+		\item[$\diamond$]	START
+		\item[$\diamond$]	Get $\vec{x}$ from component GUI$\_$Display
+		\item[$\diamond$]	Convert the full input sentence and store.
+		\item[$\diamond$]	Listen for connection from Email$\_$Communicate and send the stored sentence. 
+	\end{itemize}
+\end{itemize}
+The pseudocode for this component's most important function of handwriting recognition is shown below:
+\begin{algorithmic}
+	\STATE $\vec{x}$ $\Leftarrow$ GUI$\_$Procedure.widget$\_$Display 
+	\STATE $\vec{w} \leftarrow$ \textbf{random}(length($\vec{x}$)) $\hfill \rightarrow$ Randommly generated weight array
+	\STATE $x_{bias} = 1$  $\hfill \rightarrow$ Initialize bias neuron
+	\STATE $w_{bias} = \textbf{random}$ $\hfill$ Generate weight of bias neuron
+	\STATE $net_j = 0$ $\hfill$ Initialize neuron output
+	\FOR {every neuron in every layer}
+	\FOR {i in range length($\vec{x}$)}
+		\STATE $net_j += \vec{x}\cdot vec{w}$
+	\ENDFOR
+	\STATE $net_j += x_{bias}\cdot w_{bias}$
+	\STATE $a_j \leftarrow \frac{1}{1+e^{-net_j}}$
+	\STATE $neuron_{out} \leftarrow a_j$
+	\STATE $layer_out$ $\Leftarrow$ $neuron_out$
+	\STATE Update $\vec{x}$ for next layer to consider $layer_{out}$
+	\ENDFOR
+	\IF {layer = outputLayer}
+	\STATE$\sigma_s = neuron_{out} - e_j$ $\hfill$ Compare output to expected.
+	\STATE $\Delta w = \sigma_s \cdot neuron_{out}$
+	\WHILE {d ($\sigma_s$) $\neq 0$}
+	\STATE $\vec{w} = \vec{w} - \Delta w$
+	\STATE $net_j = \sum{\vec{w} \cdot \vec{x}} + 1\cdot (w_{bias})$
+	\STATE$\sigma_s = neuron_{out} - e_j$  
+	\ENDWHILE
+		\STATE $output \leftarrow \frac{1}{1+e^{-net_j}}$
+	\ENDIF
+\end{algorithmic}
+
+\textbf{Design  Class Hierarchy}\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{41.jpg}
+	\caption{Design class hierarchy for NeuralNetwork component}
+\end{figure}
+
+The design class hierarchy shows the specific functions from the connected functions that interact with the component.
+
+\textbf{Restrictions}\\
+ The number of hidden layers chosen had to be enough for significant accurate recognition but not too much because too much time would have been spent back-propagating and correcting errors.
+
+\textbf{Component GUI$\_$Display}
+\begin{itemize}
+	\item \textbf{Processing Narrative of GUI$\_$Display}: The attributes in the component included the 2D array to save the equivalent screen inputs and a button which could clear the touchscreen when pressed.
+	\item \textbf{Interface description of GUI$\_$Display}: The component interfaced with the NeuralNetwork component to provide the necessary vector array of inputs after converting the screen shot from the touchscreen to integer values in the array.
+	\item \textbf{Algorithm Description of the GUI$\_$Display} : The link between the two components can be described in short as follows:
+	\begin{itemize}
+		\item[$\diamond$] START
+		\item[$\diamond$] Prompt handwriting input
+		\item[$\diamond$] Save Image of User Input
+		\item[$\diamond$] Map the image coordinates to the 2D array of inputs.
+	\end{itemize}
+\end{itemize}
+The pseudocode associated with the screen capturing and saving part is shown below:
+
+\begin{algorithmic}
+	\STATE widget$\_$Display = \textbf{empty}([] []) $\hfill$ Initialize empty GUI screen 
+	\STATE coordinatesPen = [0,0] $\hfill$ Initialize mouse/pen drawing tool to null
+	\IF {user enters drawing on screen}
+	\WHILE {finishedDrawing $==$ \textbf{false}}
+	\STATE draw += coordinatesPen $\hfill$ Take user's pen input.
+	\ENDWHILE
+	\STATE drawnImage = draw $\hfill$ The summed up user pen drawings.
+	
+	
+	\textbf {for} {[\textbf{row}(drawnImage),\textbf{column}(drawnImage)]}  \textbf{do}
+	\IF {drawnImage[row, column] == white}
+	\STATE $widget\_Display$ [row, column] = 0
+	\ELSE
+	\STATE $widget\_Display$ [row, column] = 1
+	\ENDIF
+	
+	\textbf{end for}
+	%\ENDFOR
+	
+	\ENDIF 
+\end{algorithmic}
+	
+\textbf{Design class hierarchy}
+The design class hierarchy diagram shows the functions used by the NeuralNetwork component that interfaces with the GUI$\_$Display component.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{43.jpg}
+	\caption{Design class hierarchy for GUI$\_$Display component}
+\end{figure}
+
+\textbf{Restrictions}\\
+The pen drawing application had a trade-off of fine ink which produced dots which overlapped against the pixel array but drawn characters were easily recognizable and sharp ink which produced the pen input images into different pixels but the image detection of the colours sometimes wrongly detected blank inputs due to the pixel most being white but containing a fraction of black ink.
+
+\textbf{Component Email$\_$Communicate}
+\begin{itemize}
+	\item \textbf{Processing Narrative of Email$\_$Communicate}: The attributes in the component included the variable to check for new mail, the stack of inbox mail and the email address of the client
+	\item  \textbf{Interface description of Email$\_$Communicate}: The component interfaced with the NeuralNetwork component to save the converted sentence into a string and store it as a text file offline. The file's contents would then be sent to the user's email address on request.
+	\item \textbf{Algorithm Description of Email$\_$Communicate}: The tasks in volved in the component were shown procedurally as follows:
+		\begin{itemize}
+		\item[$\diamond$] START
+		\item[$\diamond$] Update shopping list with new converted sentence.
+		\item[$\diamond$] Check new mail and update onto mail stack.
+		\item[$\diamond$] Check address of new mail.
+		\item[$\diamond$] Send shopping list contents if the new mail email address is the same as the client address.
+	\end{itemize}
+\end{itemize}
 
 \subsection{Design summary}
 \begin{center}

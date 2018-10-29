@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.13)  28 OCT 2018 19:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.13)  29 OCT 2018 03:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3029,6 +3029,9 @@ Package pdftex.def Info: 34.jpg  used on input line 539.
 LaTeX Warning: Float too large for page by 62.90572pt on input line 541.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3057,6 +3060,10 @@ File: 36.jpg Graphic file (type jpg)
 <use 36.jpg>
 Package pdftex.def Info: 36.jpg  used on input line 552.
 (pdftex.def)             Requested size: 147.04901pt x 603.25227pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
@@ -3089,22 +3096,144 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
 LaTeX Font Info:    Font shape `T1/ptm/bx/sl' in size <12> not available
 (Font)              Font shape `T1/ptm/b/sl' tried instead on input line 585.
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--596
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 594--603
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--603
+
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[43]
+<38.png, id=291, 673.51625pt x 492.84125pt>
+File: 38.png Graphic file (type png)
+<use 38.png>
+Package pdftex.def Info: 38.png  used on input line 611.
+(pdftex.def)             Requested size: 404.11287pt x 295.70702pt.
+<42.jpg, id=292, 682.55pt x 592.2125pt>
+File: 42.jpg Graphic file (type jpg)
+<use 42.jpg>
+Package pdftex.def Info: 42.jpg  used on input line 619.
+(pdftex.def)             Requested size: 409.53316pt x 355.33023pt.
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[44 <./38.png>]
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[45 <./42.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+
+ []
+
+<41.jpg, id=300, 682.55pt x 592.2125pt>
+File: 41.jpg Graphic file (type jpg)
+<use 41.jpg>
+Package pdftex.def Info: 41.jpg  used on input line 668.
+(pdftex.def)             Requested size: 341.27417pt x 296.10551pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[46]
+Underfull \hbox (badness 2334) in paragraph at lines 680--681
+[]\T1/ptm/b/n/12 Interface de-scrip-tion of GUI$[]$Display\T1/ptm/m/n/12 (+20) 
+: The com-pon-ent in-ter-faced with the
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[47 <./41.jpg>]
+<43.jpg, id=309, 632.3625pt x 230.8625pt>
+File: 43.jpg Graphic file (type jpg)
+<use 43.jpg>
+Package pdftex.def Info: 43.jpg  used on input line 719.
+(pdftex.def)             Requested size: 379.42043pt x 138.51855pt.
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[48 <./43.jpg>]
+Underfull \hbox (badness 1033) in paragraph at lines 730--732
+[]\T1/ptm/b/n/12 Algorithm De-scrip-tion of Email$[]$Communicate\T1/ptm/m/n/12 
+(+20) : The tasks in volved in the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
 []|\T1/ptm/m/n/12 (+20) Design of non-USB
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 596--596
+Underfull \hbox (badness 3568) in paragraph at lines 749--749
 []|\T1/ptm/m/n/12 (+20) The off the shelf 5 V bat-tery was
  []
 
 
-Overfull \hbox (51.82632pt too wide) in alignment at lines 589--604
+Overfull \hbox (51.82632pt too wide) in alignment at lines 742--757
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 604
+Underfull \vbox (badness 10000) detected at line 757
  []
 
 
@@ -3117,7 +3246,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[42]) (./section4.tex
+[49]) (./section4.tex
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3127,7 +3256,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[43
+[50
 
 ]) (./section5.tex
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3139,7 +3268,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[44
+[51
 
 ]) (./section6.tex
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3151,7 +3280,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[45
+[52
 
 ])
 \openout3 = `bu.aux'.
@@ -3166,7 +3295,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[46
+[53
 
 ] (./techdoc.tex)
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3178,7 +3307,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[47] (./finalreport.aux (./bu.aux) (./bu.aux))
+[54] (./finalreport.aux (./bu.aux) (./bu.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3188,10 +3317,10 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 19 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45591 strings out of 492646
- 1018659 string characters out of 6133325
- 1233547 words of memory out of 5000000
- 48375 multiletter control sequences out of 15000+600000
+ 45611 strings out of 492646
+ 1018855 string characters out of 6133325
+ 1233546 words of memory out of 5000000
+ 48391 multiletter control sequences out of 15000+600000
  611729 words of font info for 232 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,17n,138p,1818b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3201,18 +3330,19 @@ xmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texlive/2018/texmf-dist/fon
 ts/enc/dvips/mnsymbol/MnSymbolD.enc}{c:/texlive/2018/texmf-dist/fonts/enc/dvips
 /mnsymbol/MnSymbolF.enc}{c:/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/Mn
 SymbolE.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.
-pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol9.pfb><c:/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/20
-18/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts
-/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/ut
-mb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texli
-ve/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on finalreport.pdf (67 pages, 1081289 bytes).
+pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb><c:/t
+exlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol9.pfb><c:/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-
+dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/ur
+w/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+<c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2018/t
+exmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on finalreport.pdf (74 pages, 1217431 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
+ 384 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 34558 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 34578 words of extra memory for PDF output out of 35830 (max. 10000000)
 
