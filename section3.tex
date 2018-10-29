@@ -530,7 +530,7 @@ The comparison was also made between Wi-Fi and other wireless alternatives. Blue
 
 The home shopping device will be designed from different components with a development board. Most development boards are delivered with internal Wi-Fi modules while 3G modules have to purchased off the shelf and are fairly expensive. The 3G modules also have to be integrated onto the hardware which leads to either more wiring involved in the device if vero-boards are used or the device becoming larger in size which contradicts the requirement of the device being small-scale. Therefore for this project, Wi-Fi communication makes more sense to use as the data transmission method. 
 
-\subsection{Modelling}
+\subsection{Software Interface Description and modelling}
 
 The handwriting writing and conversion process can be summarized by the flow chart below. The flow chart only documents the process from where the user writes onto the touchscreen until the user finishes writing onto the touchscreen.
 \clearpage
@@ -558,12 +558,69 @@ For the GSM network option, the transfer speeds of GSM are $\approx$ 10 kbps. Th
 \begin{align*}
 	t &= \frac{\text{File size}}{\text{Transmission Speed}}\\
 	&= \frac{586 \times 8 \times 10^3 bits}{10 \times 10^3 bits/s}\\
-	&= 46.9\,s
+	&= 469\,s
 \end{align*}
 
-This is way very slow and does not meet the time specifications of the product.
+The propagation time was calculated as follows:
+\begin{align*}
+t_{prop(gsm)} &= \frac{\text{distance}}{\text{Propagation speed}}\\
+\text{The propagating distance for W-Fi is equal to the speed of light so that:}\\
+t_{prop(gsm)} &= \frac{20 \times 10^3}{3 \times 10^8}\\
+&= 66.71 \mu s	
+\end{align*}
+
+Therefore the total transmission time was calculated as:
+\begin{align*}
+t_{total} &= t_{prop(wifi)} + t_{transmit(gsm)}\\
+&= (469 + 0.0000667) \text{s}\\
+&\approx 469 \text{s} \quad \quad \text{Since:\quad} t_{prop(gsm)}>>>t_{transmit(gsm)}
+\end{align*}
+
+This is way too slow and does not meet the time specifications of the product since the user has to wait for $\approx$ 8 minutes before getting their shopping list delivered.
 
 A trade-off is analyzed for the frequency band for the Wi-Fi communication. The frequency band in important in determining the Wi-Fi module to use for the shopping list device. Infrared waves cannot penetrate walls therefore are extremely range limited but offer very fast transmission speeds. On the other hand, radio waves can travel long distances but their data transmission rates are significantly lower. The two properties can be quantitatively compared by taking an example of 20 km between the source and destination. This models a situation where the customer shops 20 km from their home and requests the shopping the list in a wireless manner. The calculations associated with this transmission are shown below.\\
+
+\begin{align*}
+	t_{prop(wifi)} &= \frac{\text{distance}}{\text{Propagation speed}}\\
+	\text{The propagating distance for W-Fi is equal to the speed of light so that:}\\
+	t_{prop(wifi)} &= \frac{20 \times 10^3}{3 \times 10^8}\\
+	&= 66.71 \mu s	
+\end{align*}
+
+Assuming the same file size of 586 kB and the transmission speed for Wi-Fi being $\approx$ 11 Mbps:
+\begin{align*}
+	t_{transmit} &= \frac{\text{File size}}{\text{Transmission Speed}}\\
+	&= \frac{586 \times 8 \times 10^3 bits}{11\times 10^6 bits/s}\\
+	&= 43 \text{ m s}
+\end{align*} 
+The total transmission time when using Wi-Fi was calculated to be:
+\begin{align*}
+	t_{total} &= t_{prop(wifi)} + t_{transmit}\\
+	&= (43 + 0.0667) \text{m s}\\
+	&= 43.067 \text{m s}
+\end{align*}
+
+On the other hand if Infrared was used, the propagation speed was the same as that for Wi-Fi radio waves, leading to a value:
+\begin{align*}
+	t_{prop(infra)} &= t_{prop(wifi)}\\
+	&= 66.71 \mu s
+\end{align*}
+For infrared, the transmission speed varies inversely with increase in distance and from [15], the transmission speed of infrared was in the kilometre range was found to be $\approx$ 120 kbps. Therefore the transmission speed was calculated as follows: 
+
+\begin{align*}
+t_{transmit(infra)} &= \frac{\text{File size}}{\text{Transmission Speed}}\\
+&= \frac{586 \times 8 \times 10^3 bits}{120\times 10^3 bits/s}\\
+&= 39.1 \text{s}
+\end{align*} 
+
+The cumulative time for the infrared connection therefore found to be:
+\begin{align*}
+t_{total} &= t_{prop(wifi)} + t_{transmit}\\
+&= (39.1 + 0.0000667) \text{m s}\\
+&\approx 39.1 \text{s}
+\end{align*}
+
+The calculations showed that Wi-Fi was tens of orders faster than infrared for longer distances and both Wi-Fi and Infrared were both at least ten times faster than GSM at the same distance. The assumption was that there were no obstructions between the Infrared connections as the waves cannot penetrate these obstructions.
 \newpage
 \subsection{Data Design}
 The software process of the project was modulated into different components. The components were listed as follows:
@@ -711,8 +768,8 @@ The pseudocode associated with the screen capturing and saving part is shown bel
 	\ENDIF 
 \end{algorithmic}
 	
-\textbf{Design class hierarchy}
-The design class hierarchy diagram shows the functions used by the NeuralNetwork component that interfaces with the GUI$\_$Display component.
+\textbf{Design class hierarchy}\\
+The design class hierarchy diagram showed the functions used by the NeuralNetwork component that interfaced with the GUI$\_$Display component.
 
 \begin{figure}[h]
 	\centering
@@ -737,6 +794,50 @@ The pen drawing application had a trade-off of fine ink which produced dots whic
 	\end{itemize}
 \end{itemize}
 
+The pseudocode associated with the most important parts of the component is shown below:
+\begin{algorithmic}
+	\STATE shoppingList.txt $\Leftarrow$ convertedSentence $\hfill$ From NeuralNetwork
+	\IF {$new\_mail$==\textbf{true}} 
+	
+	\STATE mailStack.push(new mail) $\hfill$ Push new mail to top of stack
+	
+	\IF {mailStack.top->emailAddress == clientAddress}
+	\WHILE {shoppingList.txt sentence != \textbf{NULL}}
+	\STATE concatenatedList += readLine(shoppingList.txt) + '\textbackslash n'
+	\ENDWHILE
+	\STATE send(concatenatedList) $\hfill$ Send the response to the user email
+	\ENDIF 
+	\ENDIF
+\end{algorithmic}
+
+\textbf{Design Class hierarchy}\\
+The hierarchy diagram showed the relevant functions from the NeuralNetwork component interfacing with the Email$\_$Communicate component.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{44.jpg}
+	\caption{Design class hierarchy for Email$\_$Communicate}
+\end{figure}
+
+\textbf{Restrictions}\\
+It was assumed that no 2 emails could be received by the device at the same time as this would cause congestion and another restriction was that the Internet connection for the device to the Internet would not alway be on.\\
+
+\subsubsection{Use case diagram}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{46}
+	\caption{Use case Digram for the home shopping list device}
+\end{figure}
+
+\subsubsection{Graphical User Interface Design}
+The PyQt application environment was used to program the GUI of the home shopping list device. The environment has the Python programming language built-in so the integration was easier with the other parts of the software. When the device was booted, the GUI would initially an empty window. The user was prompted to write in the window. The GUI also contained buttons to clear the window and a button to save the drawing. When the user successfully has drawn their sentence input, they had to click the save button for the device to save the screen shot of their sentence. After the input of the first sentence, another button was introduced into the GUI. This button was for clearing the shopping list text file. This could have been due to the user having had successfully bought their shopping list items and needing to write a new shopping list for the next time they went to shop.
+\subsection{Hardware Implementation}
+The choice for the development board to use ended up being between the Odroid and the Raspberry Pi. The standard Odroid is operates in Android OS while the Raspberry Pi runs on a Linux distribution. The Raspberry Pi was chosen due to the number of pogrammming platforms that it contains and were relevant to the project. These included the Java runtime environment as well as the PyQt platform for the GUI of the device.
+
+The choice of the portable touchscreen was between the "7" inch Raspberry Pi touchscreen and the 3.5 inch TFT LCD touchscreen. The 7 inch Raspberry Pi was the design coice for the touchscreen due to the high sensitivity it provided compared to the TFT screen which required extensive pressing for response and was too small to enter the shopping list sentence without compromising the user's hand flexibility. 
+
+The choice for the off the shelf battery was betwen the Lithium-Ion 3.7 V wire rechargeable battery and the Ansmann 3.7 V wire lead terminal battery. The Lithium-Ion battery was chosen because it was lightweight and did not comprommise the wiring of the circuit as it only needed to be fit sideways, not occupying much space. On the other hand, the Ansmann battery would have required a lot of free space at the back of the touchscreen which was integrated with the Raspberry Pi. This would have led to a battery whose charging system was difficult to integrate. 
+
 \subsection{Design summary}
 \begin{center}
 	\begin{longtable}{|p{4cm}|p{7cm}|p{5cm}|}
@@ -746,11 +847,19 @@ The pen drawing application had a trade-off of fine ink which produced dots whic
 		\textbf{Task Completion}
 		\\
 		\hline
-		Design of non-USB battery system& The off the shelf 5 V battery was bought off the shelf. The Raspberry Pi's touchscreen and the Raspberry Pi were connected to it & Complete\\
+		Design of non-USB battery system& The off the shelf 5 V battery was bought off the shelf. The Raspberry Pi's touchscreen and the Raspberry Pi were connected to it & Incomplete\\
 		\hline
-		&  &  \\
+		Design of email server
+		&  The email server was implemented using Python. The Raspberry Pi on the shopping device would listen for incoming emails and check if the incoming email was from the client email address that was preset &  Complete\\
 		\hline
-		 &  & \\
+		Design of handwriting recognition algorithm
+		 &  The handwriting recognition algorithm was implemented via Python from first principles. A screen shot of the pen drawing from the user to the touchscreen was taken and passed to the algorithm which vectorized the image to integer coordinates and applied the recognition algorithm& Complete\\
+		 \hline
+		 Design of GUI
+		 &  The touchscreen for the GUI was bought off the shelf and the GUI was programmed using Python. This GUI was automatically started at device boot time.& Complete\\
+		 \hline
+		 Design of Drawing Application
+		&  The user's pen input onto the touchscreen was saved by modelling an application which traced the pen movements until the save button was clicked. This modelled image was then used as input to be changed to an array of coordinates for the input vector.& Complete\\		 
 		
 		\hline
 		\caption{Design summary.}

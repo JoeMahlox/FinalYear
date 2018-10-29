@@ -21,25 +21,28 @@
 \contentsline {subsection}{\numberline {2.2}Preferred solution}{12}
 \contentsline {section}{\numberline {3}Design and implementation}{14}
 \contentsline {subsection}{\numberline {3.1}Theoretical analysis}{14}
-\contentsline {subsection}{\numberline {3.2}Modelling}{37}
+\contentsline {subsection}{\numberline {3.2}Software Interface Description and modelling}{37}
 \contentsline {subsection}{\numberline {3.3}Optimization}{41}
-\contentsline {subsection}{\numberline {3.4}Data Design}{42}
-\contentsline {subsubsection}{\numberline {3.4.1}Internal Software Data Structure}{42}
-\contentsline {subsubsection}{\numberline {3.4.2}Global Software Data Structure}{42}
-\contentsline {subsubsection}{\numberline {3.4.3}Temporary Data Structure}{43}
-\contentsline {subsubsection}{\numberline {3.4.4}Database Description}{43}
-\contentsline {subsection}{\numberline {3.5}Architectural and Component Level Design}{44}
-\contentsline {subsubsection}{\numberline {3.5.1}Program Description}{44}
-\contentsline {subsubsection}{\numberline {3.5.2}Architecture Diagram}{44}
-\contentsline {subsubsection}{\numberline {3.5.3}Architectural Component Description}{45}
-\contentsline {subsubsection}{\numberline {3.5.4}Description of Components}{45}
-\contentsline {subsection}{\numberline {3.6}Design summary}{49}
-\contentsline {section}{\numberline {4}Results}{50}
-\contentsline {subsection}{\numberline {4.1}Summary of results achieved}{50}
-\contentsline {subsection}{\numberline {4.2}Qualification tests}{50}
-\contentsline {section}{\numberline {5}Discussion}{51}
-\contentsline {section}{\numberline {6}Conclusion}{52}
-\contentsline {subsection}{\numberline {6.1}Summary of the work}{52}
-\contentsline {section}{\numberline {7}References}{53}
-\contentsline {part}{Part 5. Technical Documentation}{54}
+\contentsline {subsection}{\numberline {3.4}Data Design}{43}
+\contentsline {subsubsection}{\numberline {3.4.1}Internal Software Data Structure}{43}
+\contentsline {subsubsection}{\numberline {3.4.2}Global Software Data Structure}{43}
+\contentsline {subsubsection}{\numberline {3.4.3}Temporary Data Structure}{44}
+\contentsline {subsubsection}{\numberline {3.4.4}Database Description}{44}
+\contentsline {subsection}{\numberline {3.5}Architectural and Component Level Design}{45}
+\contentsline {subsubsection}{\numberline {3.5.1}Program Description}{45}
+\contentsline {subsubsection}{\numberline {3.5.2}Architecture Diagram}{45}
+\contentsline {subsubsection}{\numberline {3.5.3}Architectural Component Description}{46}
+\contentsline {subsubsection}{\numberline {3.5.4}Description of Components}{46}
+\contentsline {subsubsection}{\numberline {3.5.5}Use case diagram}{51}
+\contentsline {subsubsection}{\numberline {3.5.6}Graphical User Interface Design}{51}
+\contentsline {subsection}{\numberline {3.6}Hardware Implementation}{52}
+\contentsline {subsection}{\numberline {3.7}Design summary}{52}
+\contentsline {section}{\numberline {4}Results}{54}
+\contentsline {subsection}{\numberline {4.1}Summary of results achieved}{54}
+\contentsline {subsection}{\numberline {4.2}Qualification tests}{54}
+\contentsline {section}{\numberline {5}Discussion}{55}
+\contentsline {section}{\numberline {6}Conclusion}{56}
+\contentsline {subsection}{\numberline {6.1}Summary of the work}{56}
+\contentsline {section}{\numberline {7}References}{57}
+\contentsline {part}{Part 5. Technical Documentation}{58}
 \contentsfinish 
