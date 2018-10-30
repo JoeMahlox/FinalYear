@@ -43,9 +43,11 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Qualification test 1: Measurement of handwriting recognition accuracy}{56}
 \contentsline {subsubsection}{\numberline {4.2.2}Qualification test 2: Measurement of the transmission time for sending email}{60}
 \contentsline {subsubsection}{\numberline {4.2.3}Qualification test 3: System detection of user finishing handwriting process and handwriting conversion}{61}
-\contentsline {section}{\numberline {5}Discussion}{64}
-\contentsline {section}{\numberline {6}Conclusion}{65}
-\contentsline {subsection}{\numberline {6.1}Summary of the work}{65}
-\contentsline {section}{\numberline {7}References}{66}
-\contentsline {part}{Part 5. Technical Documentation}{67}
+\contentsline {subsubsection}{\numberline {4.2.4}Qualification test 4: Integration of device hardware}{62}
+\contentsline {subsubsection}{\numberline {4.2.5}Qualification test 5: Operation in dark light conditions}{64}
+\contentsline {section}{\numberline {5}Discussion}{67}
+\contentsline {section}{\numberline {6}Conclusion}{68}
+\contentsline {subsection}{\numberline {6.1}Summary of the work}{68}
+\contentsline {section}{\numberline {7}References}{69}
+\contentsline {part}{Part 5. Technical Documentation}{70}
 \contentsfinish 

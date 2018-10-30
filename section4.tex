@@ -46,14 +46,14 @@
 		&
 		The device could accurately recognize handwritings from multiple users. 
 		&
-		Section 4.2.8
+		Section 4.2.2
 		\\
 		\hline
 		The device should operate under varying light conditions that will be typical of what the user will encounter in indoor environments.
 		&
 		Operation of the device was executed in a dark room and in the presence of a bright fluorescent light. The device successfully carried out all its function in the two different light conditions.
 		&
-		Section 4.2.11
+		Section 4.2.5
 		\\
 		\hline
 		\multicolumn{3}{|l|} {\textbf{Specifications}} \\
@@ -80,7 +80,7 @@
 		full capacity.
 		&
 		An algorithm was programmed to continuously check the battery progress bar as a global variable of the project and when it reached less than $10\%$, a boolean flag for low battery was triggered.
-		&	Section 4.2.9\\
+		&	Section 4.2.3\\
 		\hline
 		Handwritten input must be converted to text by the character recognition software in less than 1s.
 		&
@@ -117,7 +117,7 @@
 		&
 		The different hardware was integrated to create the full working physical system which could be attached to a fridge.
 		&
-		Section 4.2.6 \\
+		Section 4.2.4 \\
 		\hline	
 		\caption{Results summary}
 	\end{longtable}
@@ -272,45 +272,51 @@ The stages that were involved with the experiment were:
 \begin{center}
 	\begin{longtable}{|p{5cm}|p{5cm}|}
 		\hline
-		\textbf{File size (kiloBytes)} &
+		\textbf{File size (Bytes)} &
 		\textbf{Transmission time (s)} \\
 		\hline
-		0.5
+		115
 		&
-		1.22
+		4.22
 		\\
 		\hline
-		0.78
+		780
 		&
-		1.48
+		6.48
 		\\
 		\hline
-		1.2
+		1200
 		&
-		2.24
+		8.24
 		\\
 		\hline
-		5.65
+		5650
 		&
-		3.32
+		17.32
 		\\
 		\hline
 		500
 		&
-		7.95
+		6.95
 		\\
 		\hline		
 		\caption{Transmission time values.}
 	\end{longtable}
 \end{center}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{110}
+	\caption{Email received from the home shopping list device}
+\end{figure}
+
 \textit{Description of Results}\\
-The first test was implemented for a file with 10 different sizes and of size 500 Bytes. The transmission time was extremely small. A few more lines were added and the transmission time was fast as well, only slower by a few hundredths of seconds. The lines of the text file were almost doubled and the transmission time increased by about a second. A bigger file i.e. an image was sent as the next argument and the transmission time was slower than the previous one by a second. A \textbf{.pdf} file was the file document sent by the e-mail system and although it was about 100 times larger than the previous file sent, it was only delivered in double the transmission time of the smaller file.
+The first test was implemented for a file with 5 different line inputs and of size 115 Bytes. The transmission time was extremely small. A few more lines were added and the transmission time was fast as well, only slower by a few seconds. The lines of the text file were almost doubled and the transmission time increased by about a second. A bigger file i.e. an image was sent as the next argument and the transmission time was slower than the previous one by a second. A \textbf{.pdf} file was the file document sent by the e-mail system and although it was about 100 times larger than the previous file sent, it was only delivered in double the transmission time of the smaller file.
 
 \subsubsection{Qualification test 3: System detection of user finishing handwriting process and handwriting conversion}
 
 4.2.3.a Qualification test\\
-\textit{Objectives of text / experiment}\\
+\textit{Objectives of test / experiment}\\
 The test involved the detection of the end of a user input process for their line sentence and the conversion of the line input in less than 1 second.
 
 \textit{Equipment used}\\
@@ -322,6 +328,9 @@ The internal timing libraries of the Python environment were used. The Widget li
 	\STATE drawn $\leftarrow$\textbf{false} userDrawing \hfill Model the input drawn
 	\ENDWHILE
 	\STATE $\rightarrow$ saveButton has now been clicked
+	\IF {batteryBar $\leq 10\%$}
+	\STATE warningonGUI() \hfill $\rightarrow$ Shows the warning sign on the GUI widget if battery low
+	\ENDIF
 	\STATE \textbf{startTimer()}
 	\STATE convertInput \hfill $\rightarrow$ Apply Recognition algorithm
 	\STATE \textbf{stopTimer()}
@@ -330,10 +339,10 @@ The internal timing libraries of the Python environment were used. The Widget li
 
 \textit{Experimental Protocol}\\
 The flow chart in Figure 36 shows the stages of the experimental protocol. 
-\newpage
+%\newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{50}
+	\includegraphics[scale=0.55]{50}
 	\caption{Flow chart showing the experiment protocol}
 \end{figure}
 
@@ -343,7 +352,7 @@ The flow chart in Figure 36 shows the stages of the experimental protocol.
 	\begin{longtable}{|p{5cm}|p{5cm}|}
 		\hline
 		\textbf{Sentence number} &
-		\textbf{Conversion time (s) ($\%$)} \\
+		\textbf{Conversion time (s)} \\
 		\hline
 		1
 		&
@@ -370,16 +379,99 @@ The flow chart in Figure 36 shows the stages of the experimental protocol.
 		0.49
 		\\
 		\hline
-		\textbf{Average Conversion Time}
+		\textbf{Average Recognition Time}
+		&
+		0.55
+		\\
+		\hline		
+		\caption{Recognition time}
+	\end{longtable}
+\end{center}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{107}
+	\caption{Button initialization on GUI}
+\end{figure}
+
+\textit{Description of Results}\\
+The save button was initialized in the empty GUI before any input. The conversion time for the recognition time was randomly distributed for different lines. The conversion time increased when the second text line was input. However, the conversion time slipped to an even lower value for the 3$^{rd}$ sentence. The conversion time increased again for the forth line input before decreasing for the fifth. The mean recognition time for the device was calculated to be 0.55 s.
+
+\subsubsection{Qualification test 4: Integration of device hardware}
+
+4.2.4.a Qualification test\\
+\textit{Objectives of test / experiment}\\
+The experiment involved the integration of all the modulated hardware components into one fully-functional device.
+
+\textit{Equipment Used}\\
+Dupont wires were used for connection of the touchscreen and the Raspberry Pi development board. Male to female and female to female jumper cables were also used to connect the power inputs together. The beam balance was used to calculate the overall weight of the device. The Vernier calipers was used to calculate the length, width and how broad the integrated hardware was. 
+
+\textit{Experiment Protocol}\\
+The following stages were taken when the user integrated the full working product:
+\begin{itemize}
+	\item  Connect the power pin of the Raspberry Pi GPIO to the power pin of the touchscreen 
+	\item  Connect the display module on the copper strip from the touchscreen to the open slot on the Raspberry Pi for the display.
+	\item Insert the 3D printed plastic cover for the device with a removable back for Raspberry Pi debugging.
+	\item Connect magnet to the backside of the integrated device.
+	
+\end{itemize}
+
+4.2.4.b Results and Observations\\
+\textit{Measurements}\\
+\begin{center}
+	\begin{longtable}{|p{5cm}|p{5cm}|}
+		\hline
+		\textbf{Measurable parameter} &
+		\textbf{Value} \\
+		\hline
+		Mass
+		&
+		
+		\\
+		\hline
+		Width
+		&
+		
+		\\
+		\hline
+		Length
 		&
 		
 		\\
 		\hline		
-		\caption{Accuracy results}
+		\caption{Fully integrated hardware parameters}
 	\end{longtable}
 \end{center}
+//Insert pictures here
 
-\textit{Description of Results}\\
+\textit{Description of results}\\
+The hardware was successfully integrated. Power was supplied to the device by either powering the Raspberry Pi or the touchscreen since they shared the connection. The device was successfully stuck on a fridge for testing.
+
+\subsubsection{Qualification test 5: Operation in dark light conditions}
+4.2.5.a Qualification test\\
+\textit{Objectives of test / experiment}\\
+The test involved the determination of successful operation of the device at various light intensities.
+
+\textit{Equipment used}\\
+A cellphone was used to capture photos of the operation of the device at different light intensity.
+
+\textit{Equipment protocol} \\
+The following stages were sequentially taken for the test to be successful.
+\begin{itemize}
+	\item  Calculate the area of the room that the home shopping list device is operating on.
+	\item Perform normal operation of the device outside the room.
+	\item Send shopping list text to user'e email.
+	\item  Switch off the room light
+	\item Attempt to write onto the device and save it.
+	\item  Request email of the shopping list from the user's phone.
+\end{itemize}
+
+4.2.4.b Results and Observations\\
+\textit{Measurements}\\
+//Insert pictures here
+
+\textit{Description of results}\\
+The device operated equally well lights were off in the operating room. The operation outdoors was also successful with the minor hindrance that the user could not perfectly see their touchscreen contents due to the reflection of the sunlight from the touchscreen.
 
 \newpage
 
