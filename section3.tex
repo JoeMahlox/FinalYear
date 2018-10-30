@@ -716,6 +716,7 @@ The pseudocode for this component's most important function of handwriting recog
 	\STATE$\sigma_s = neuron_{out} - e_j$  
 	\ENDWHILE
 		\STATE $output \leftarrow \frac{1}{1+e^{-net_j}}$
+		\STATE \textbf{assignLetter}(output) $\hfill$ Assign the corresponding letter to the output
 	\ENDIF
 \end{algorithmic}
 
@@ -865,6 +866,7 @@ The choice for the off the shelf battery was betwen the Lithium-Ion 3.7 V wire r
 		\caption{Design summary.}
 	\end{longtable}
 \end{center}
+
 \newpage
 
 %% End of File.

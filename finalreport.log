@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.13)  29 OCT 2018 05:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.13)  30 OCT 2018 03:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3184,7 +3184,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 685--687
 <41.jpg, id=304, 682.55pt x 592.2125pt>
 File: 41.jpg Graphic file (type jpg)
 <use 41.jpg>
-Package pdftex.def Info: 41.jpg  used on input line 725.
+Package pdftex.def Info: 41.jpg  used on input line 726.
 (pdftex.def)             Requested size: 341.27417pt x 296.10551pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3200,7 +3200,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
  []
 
 [47]
-Underfull \hbox (badness 2334) in paragraph at lines 737--738
+Underfull \hbox (badness 2334) in paragraph at lines 738--739
 []\T1/ptm/b/n/12 Interface de-scrip-tion of GUI$[]$Display\T1/ptm/m/n/12 (+20) 
 : The com-pon-ent in-ter-faced with the
  []
@@ -3219,7 +3219,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
 <43.jpg, id=313, 632.3625pt x 230.8625pt>
 File: 43.jpg Graphic file (type jpg)
 <use 43.jpg>
-Package pdftex.def Info: 43.jpg  used on input line 776.
+Package pdftex.def Info: 43.jpg  used on input line 777.
 (pdftex.def)             Requested size: 379.42043pt x 138.51855pt.
 
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3232,7 +3232,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
  []
 
 [49 <./43.jpg>]
-Underfull \hbox (badness 1033) in paragraph at lines 787--789
+Underfull \hbox (badness 1033) in paragraph at lines 788--790
 []\T1/ptm/b/n/12 Algorithm De-scrip-tion of Email$[]$Communicate\T1/ptm/m/n/12 
 (+20) : The tasks in volved in the
  []
@@ -3240,30 +3240,35 @@ Underfull \hbox (badness 1033) in paragraph at lines 787--789
 <44.jpg, id=317, 722.7pt x 230.8625pt>
 File: 44.jpg Graphic file (type jpg)
 <use 44.jpg>
-Package pdftex.def Info: 44.jpg  used on input line 818.
+Package pdftex.def Info: 44.jpg  used on input line 819.
 (pdftex.def)             Requested size: 433.62334pt x 138.51855pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--824
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--825
 
  []
 
-
-Overfull \hbox (9.12012pt too wide) has occurred while \output is active
-    []
- []
-
-
-Overfull \hbox (9.12012pt too wide) has occurred while \output is active
-    []
- []
-
-[50 <./44.jpg>]
-<46.jpg, id=321, 722.7pt x 461.725pt>
+<46.jpg, id=318, 722.7pt x 461.725pt>
 File: 46.jpg Graphic file (type jpg)
 <use 46.jpg>
-Package pdftex.def Info: 46.jpg  used on input line 828.
+Package pdftex.def Info: 46.jpg  used on input line 829.
 (pdftex.def)             Requested size: 433.62334pt x 277.03714pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[50]
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3273,33 +3278,33 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[51 <./46.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 850--850
+[51 <./44.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 851--851
 []|\T1/ptm/m/n/12 (+20) Design of non-USB
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 850--850
+Underfull \hbox (badness 3568) in paragraph at lines 851--851
 []|\T1/ptm/m/n/12 (+20) The off the shelf 5 V bat-tery was
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--862
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
 []|\T1/ptm/m/n/12 (+20) Design of Draw-ing
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 862--862
+Underfull \hbox (badness 1478) in paragraph at lines 863--863
 \T1/ptm/m/n/12 (+20) im-age was then used as in-put to be
  []
 
 
-Overfull \hbox (51.82632pt too wide) in alignment at lines 843--866
+Overfull \hbox (51.82632pt too wide) in alignment at lines 844--867
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 866
+Underfull \vbox (badness 10000) detected at line 867
  []
 
 
@@ -3312,7 +3317,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[52]
+[52 <./46.jpg>]
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3323,6 +3328,195 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
  []
 
 [53]) (./section4.tex
+Underfull \hbox (badness 4621) in paragraph at lines 14--14
+\T1/ptm/b/n/12 or spe-cific-a-tion (in-ten-ded
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+[]|\T1/ptm/m/n/12 (+20) Text re-cog-ni-tion should
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 20--24
+\T1/ptm/m/n/12 (+20) con-sider the prob-ab-il-ity of
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 25--26
+[]|\T1/ptm/m/n/12 (+20) The Vi-terbi al-gorithm was
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 30--31
+[]|\T1/ptm/m/n/12 (+20) The user should be able
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 30--31
+\T1/ptm/m/n/12 (+20) to undo an in-put onto the
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 32--33
+[]|\T1/ptm/m/n/12 (+20) The device's GUI had a
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 32--33
+\T1/ptm/m/n/12 (+20) "Clear" but-ton which had
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+\T1/ptm/m/n/12 (+20) track of the "Fin-ished"
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 40--41
+\T1/ptm/m/n/12 (+20) but-ton on the GUI, which
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+[]|\T1/ptm/m/n/12 (+20) The device should read
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+\T1/ptm/m/n/12 (+20) hand-writ-ing in-put from
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 52--53
+[]|\T1/ptm/m/n/12 (+20) The device should op-er-ate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+[]|\T1/ptm/m/n/12 (+20) The av-er-age ac-cur-acy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\T1/ptm/m/n/12 (+20) cal-cu-lated from dif-fer-ent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\T1/ptm/m/n/12 (+20) un-seen hand-writ-ings was
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 77--81
+[]|\T1/ptm/m/n/12 (+20) The user must be warned
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
+\T1/ptm/m/n/12 (+20) when the bat-tery power
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[]|\T1/ptm/m/n/12 (+20) An al-gorithm was
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 82--83
+\T1/ptm/m/n/12 (+20) check the bat-tery pro-gress
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 85--86
+[]|\T1/ptm/m/n/12 (+20) Handwritten in-put must be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+\T1/ptm/m/n/12 (+20) con-ver-ted to text by the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--100
+[]|\T1/ptm/m/n/12 (+20) The com-mu-nic-a-tion link
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--100
+\T1/ptm/m/n/12 (+20) between the device's
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--100
+\T1/ptm/m/n/12 (+20) com-mu-nic-a-tion sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+\T1/ptm/m/n/12 (+20) al-gorithm for hand-writ-ten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+\T1/ptm/m/n/12 (+20) in-put to text con-ver-sion.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+\T1/ptm/m/n/12 (+20) The al-gorithm will be
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 108--109
+\T1/ptm/m/n/12 (+20) im-ple-men-ted on the hand-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]|\T1/ptm/m/n/12 (+20) The op-tical re-cog-ni-tion
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 110--111
+\T1/ptm/m/n/12 (+20) al-gorithm was suc-cess-fully
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+\T1/ptm/m/n/12 (+20) pro-cessor board, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+\T1/ptm/m/n/12 (+20) com-mu-nic-a-tion sys-tem
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 115--117
+\T1/ptm/m/n/12 (+20) and the touch-screen LCD
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 115--117
+\T1/ptm/m/n/12 (+20) to make the shop-ping list
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+\T1/ptm/m/n/12 (+20) work-ing phys-ical sys-tem
+ []
+
+
+Overfull \hbox (23.37358pt too wide) in alignment at lines 12--123
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 123
+ []
+
+
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3334,7 +3528,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
 
 [54
 
-]) (./section5.tex
+]
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
@@ -3344,7 +3538,184 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[55
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 212
+ []
+
+<101.png, id=341, 602.25pt x 425.59pt>
+File: 101.png Graphic file (type png)
+<use 101.png>
+Package pdftex.def Info: 101.png  used on input line 217.
+(pdftex.def)             Requested size: 240.89572pt x 170.23297pt.
+<102.png, id=342, 604.2575pt x 426.59375pt>
+File: 102.png Graphic file (type png)
+<use 102.png>
+Package pdftex.def Info: 102.png  used on input line 223.
+(pdftex.def)             Requested size: 241.69872pt x 170.63446pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<103.png, id=343, 604.2575pt x 426.59375pt>
+File: 103.png Graphic file (type png)
+<use 103.png>
+Package pdftex.def Info: 103.png  used on input line 229.
+(pdftex.def)             Requested size: 241.69872pt x 170.63446pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<105.png, id=344, 604.2575pt x 426.59375pt>
+File: 105.png Graphic file (type png)
+<use 105.png>
+Package pdftex.def Info: 105.png  used on input line 235.
+(pdftex.def)             Requested size: 241.69872pt x 170.63446pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<106.png, id=345, 903.375pt x 678.535pt>
+File: 106.png Graphic file (type png)
+<use 106.png>
+Package pdftex.def Info: 106.png  used on input line 241.
+(pdftex.def)             Requested size: 361.3436pt x 271.40918pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[57 <./101.png>]
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[58 <./102.png> <./103.png>]
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[59 <./105.png> <./106.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 304
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[60
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[61]
+<50.jpg, id=367, 251.94125pt x 774.895pt>
+File: 50.jpg Graphic file (type jpg)
+<use 50.jpg>
+Package pdftex.def Info: 50.jpg  used on input line 336.
+(pdftex.def)             Requested size: 125.9703pt x 387.44655pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
+
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 379
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[62 <./50.jpg>]
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[63]) (./section5.tex
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+
+Overfull \hbox (9.12012pt too wide) has occurred while \output is active
+    []
+ []
+
+[64
 
 ]) (./section6.tex
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3356,7 +3727,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[56
+[65
 
 ])
 \openout3 = `bu.aux'.
@@ -3371,7 +3742,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[57
+[66
 
 ] (./techdoc.tex)
 Overfull \hbox (9.12012pt too wide) has occurred while \output is active
@@ -3383,7 +3754,7 @@ Overfull \hbox (9.12012pt too wide) has occurred while \output is active
     []
  []
 
-[58] (./finalreport.aux (./bu.aux) (./bu.aux))
+[67] (./finalreport.aux (./bu.aux) (./bu.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3393,13 +3764,13 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 19 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45621 strings out of 492646
- 1018953 string characters out of 6133325
- 1233546 words of memory out of 5000000
- 48399 multiletter control sequences out of 15000+600000
- 611729 words of font info for 232 fonts, out of 8000000 for 9000
+ 45652 strings out of 492646
+ 1019267 string characters out of 6133325
+ 1239707 words of memory out of 5000000
+ 48427 multiletter control sequences out of 15000+600000
+ 611534 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,17n,138p,1818b,702s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,17n,138p,1818b,732s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/tex
 live/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{c:/texlive/2018/te
 xmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{c:/texlive/2018/texmf-dist/fon
@@ -3415,10 +3786,10 @@ w/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on finalreport.pdf (78 pages, 1277113 bytes).
+Output written on finalreport.pdf (87 pages, 1377271 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 440 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 34588 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 34618 words of extra memory for PDF output out of 35830 (max. 10000000)
 
